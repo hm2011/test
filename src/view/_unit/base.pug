@@ -1,0 +1,57 @@
+include /_unit/processor.pug
+
+
+block data
+    - var pageData = renderData
+    - var pageTitle = '未指定标题'
+    - var pageKeywords = '装修效果图,室内装修效果图,家居装修效果图'
+    - var pageDescription = '爱福窝装修效果图,为您提供国内外最流行的室内装修整体效果图和2016最新款家居装饰搭配图片,还有丰富时尚的客厅、卧室、电视墙、卫生间、阳台等各类2016装修效果图大全。'
+    - var pageMountPoint = 'home' //此项决定页面header中的导航哪一个高亮显示
+
+
+doctype html
+html(lang='zh-CN')
+    head
+        meta(charset='UTF-8')
+        meta(content='IE=edge,Chrome=1', http-equiv='X-UA-Compatible')
+        meta(content='webkit', name='renderer')
+        title #{pageTitle}
+        meta(content=`${pageKeywords}`, name='keywords')
+        meta(content=`${pageDescription}`, name='description')
+        meta(content='format=html5;url=http://m.fuwo.com/xgt/', name='mobile-agent')
+        link(rel='icon',type='image/x-icon',href=`${_static('data/image/favicon.ico')}`)
+
+        //- 页面引入的样式
+        block style
+            link(rel='stylesheet', type='text/css', href=`${_static('style/frame.scss')}`)
+
+        script.
+            var require = {
+                baseUrl: '#{config.staticPath}'.replace('/\/$/','') + '/script/'
+            };
+        //- <!--[if lt IE 9]>
+        //- <script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        //- <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+        //- <![endif]-->
+    body
+        //- 页头
+        block pageHeader
+            include /_unit/header.pug
+
+        //- 页面主体
+        block pageContent
+            #page-content
+
+        //- 页脚
+        block pageFooter
+            include /_unit/footer.pug
+
+
+        //- 页面中用到的模板
+        block other
+
+        //- 页面中引入的脚本
+        block script
+            script(src='//static.fuwo.com/common/requirejs/2.3.3/require.min.js')
+            script(src=`${_static('script/require.config.js')}`)
+

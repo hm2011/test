@@ -1,0 +1,18 @@
+extends /_unit/base.pug
+
+
+append data
+    - var pageTitle = '装修案例详情页'
+    - var pageMountPoint = 'case'
+
+
+append style
+	link(rel='stylesheet', type='text/css', href=`${_static('style/case/detail.scss')}`)
+
+
+block pageContent
+    #page-content
+
+
+append script
+    script(src=`${_static('script/entry/case/detail.js')}`)

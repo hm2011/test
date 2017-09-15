@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+// z-index
+$z-layers: (
+    "default":            1,
+    "below":             -1,
+    "max":            10000,
+    "bar": (
+        "bar":           10,
+        "btn":           20,
+        "icon":          20
+    ),
+    "backdrop":         998,
+    "modal":            999,
+    "popover":(
+        "popover":      999,
+        "arrow":       1000,
+    ),
+    "scroll": (
+        "scrollbar":   9998,
+     ),
+    "toast":           9999,
+);
+
+@function map-has-nested-keys($map, $keys...) {
+    @each $key in $keys {
+        @if not map-has-key($map, $key) {
+            @return false;
+        }
+        $map: map-get($map, $key);
+    }
+    
+    @return true;
+}
+
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+ 
+    @return $map;
+}
+
+@function z($layers...) {
+    @if not map-has-nested-keys($z-layers, $layers...) {
+        @warn "No layer found for `#{inspect($layers...)}` in $z-layers map. Property omitted.";
+    }
+ 
+    @return map-deep-get($z-layers, $layers...);
+}
+
+
+// Clearfix
+@mixin clearfix() {
+    &:before,
+    &:after {
+        display: table;
+        content: " ";
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+//单行超出显示...
+@mixin single-line() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+//多行
+@mixin multiple-line($number: 2) {
+    word-break: break-all;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $number;
+    -webkit-box-orient: vertical;
+}
+
+//固定高宽比的图片容器
+@mixin image-box($aspectRatio: 100%, $display: block, $position: relative){
+    display: $display;
+    position: $position;
+    &:before {
+        content: "";
+        display: block;
+        padding-top: $aspectRatio;
+        width: 100%;
+        height: 0;
+    }
+    & > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}

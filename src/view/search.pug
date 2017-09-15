@@ -1,0 +1,182 @@
+extends /_unit/base.pug
+
+
+append data
+    - var pageTitle = '搜索结果列表页'
+    - var pageMountPoint = 'search'
+
+
+append style
+    link(rel='stylesheet',type='text/css',href=`${_static('style/search.scss')}`)
+
+
+block pageContent
+    #page-content.page-block
+        section.banner-block
+        section
+            .content-wrapper
+                .search-block
+                    form.search-box(action='/search')
+                        input(type='text', name='keywords', maxlength='30', placeholder='搜索你喜欢的')
+                        button(type='submit')
+                    .result-info
+                        | 搜索到与
+                        em 阳台
+                        | 相关的结果
+                        em 51580
+                        | 条
+        section
+            .content-wrapper
+                .recommend-box.closed
+                    .title 相关推荐
+                    .cont
+                        ul.tag-list
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                    button.ctrl-btn(type='button')
+        setction
+            .content-wrapper
+                ul.serach-result-list
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .title 万科尚都荟135平效果图
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .title 万科尚都荟135平效果图
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .title 万科尚都荟135平效果图
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .title 万科尚都荟135平效果图
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .title 万科尚都荟135平效果图
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .title 万科尚都荟135平效果图
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .title 万科尚都荟135平效果图
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .title 万科尚都荟135平效果图
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .title 万科尚都荟135平效果图
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/f7c3ffd0cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .title 万科尚都荟135平效果图
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .title 万科尚都荟135平效果图
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .title 万科尚都荟135平效果图
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .title 万科尚都荟135平效果图
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .title 万科尚都荟135平效果图
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .title 万科尚都荟135平效果图
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .title 万科尚都荟135平效果图
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .title 万科尚都荟135平效果图
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .title 万科尚都荟135平效果图
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .title 万科尚都荟135平效果图
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/f7c3ffd0cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .title 万科尚都荟135平效果图
+
+
+
+block pageFooter
+
+
+
+append script
+    script(src=`${_static('script/entry/public/list.js')}`)

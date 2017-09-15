@@ -1,0 +1,23 @@
+extends /_unit/base.pug
+
+
+append data
+    - var pageTitle = '家居图册详情页'
+    - var pageMountPoint = 'album'
+
+
+append style
+    link(rel='stylesheet', type='text/css', href=`${_static('style/album/detail.scss')}`)
+
+
+block pageContent
+    #page-content
+        include /_unit/pic_player.pug
+        include /_unit/pic_detail_side.pug
+
+
+block pageFooter
+
+
+append script
+    script(src=`${_static('script/entry/album/detail.js')}`)

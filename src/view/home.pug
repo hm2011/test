@@ -1,0 +1,427 @@
+extends /_unit/base.pug
+
+
+append data
+    - var pageTitle = '首页'
+    - var headerType = 'transparent' //此变量决定页面初始状态的header是透明的
+    - var pageMountPoint = 'home'
+
+
+append style
+    link(rel='stylesheet',type='text/css',href=`${_static('style/home.scss')}`)
+    link(rel='stylesheet',type='text/css',href='//static.fuwo.com/common/swiper/3.4.2/swiper.min.css')
+
+
+block pageContent
+    #page-content.page-block
+        section.site-search
+            //- .content-wrapper
+            .cont-wrapper
+                p.slogan 福窝，为您提供装修设计灵感
+                form.search-box(action='/search')
+                    input(type='text', name='keywords', maxlength='30', placeholder='搜索你喜欢的')
+                    button(type='submit')
+                p.hot 
+                    | 热门搜索：
+                    a(href='#') 客厅装修效果图
+                    a(href='#') 小户型效果图
+                    a(href='#') 客厅走廊效果图
+        section.banner
+            ul.swiper-wrapper
+                li.swiper-slide
+                    a(href='#')
+                        img(src=`${_static('data/image/banner01.png')}`)
+                li.swiper-slide
+                    a(href='#')
+                        img(src=`${_static('data/image/banner02.png')}`)
+                li.swiper-slide
+                    a(href='#')
+                        img(src=`${_static('data/image/banner03.png')}`)
+            .banner-pagination
+            button.banner-ctrl-btn.banner-prev
+            button.banner-ctrl-btn.banner-next
+        section.content-list.page-block
+            .content-wrapper
+                nav.cont-nav
+                    ul
+                        li
+                            a.pic(href='#')
+                                h2 家居美图
+                                p.desc 千万张美图任你筛选
+                        li
+                            a.pic-set(href='#')
+                                h2 家居图册
+                                p.desc 各类家居装修图片都在这里
+                        li
+                            a.case(href='#')
+                                h2 装修案例
+                                p.desc 为您提供完整个性化解决方案
+                        li
+                            a.public-pic(href='#')
+                                h2 公装图册
+                                p.desc 拥有海量精选高清图片
+        section.recommended-cont
+            .content-wrapper
+                .container-title
+                    span 为您推荐
+                .container-cont
+                    ul.recommended-list
+                        li
+                            a.img-link(href='#')
+                                img(src='//img.hb.aicdn.com/97999d0b4a916b4d1c7a48f06097cb83d923a01112827-qApwS7_sq320')
+                            .info-panel
+                                .type
+                                    span 客厅
+                                .title
+                                    a(href='#') 家装客厅设计效果图欣赏
+                                .statistical-info
+                                    span.number 共13467张
+                                    span.view 6345346点击
+                                .date 最新更新日期：2017-06-28
+                        li
+                            a.img-link(href='#')
+                                img(src='//img.hb.aicdn.com/14c1d2ed4a738087affd4a6787e242e23d5eddf59f06-7cGXQz_sq320')
+                            .info-panel
+                                .type
+                                    span 客厅
+                                .title
+                                    a(href='#') 家装客厅设计效果图欣赏
+                                .statistical-info
+                                    span.number 共13467张
+                                    span.view 6345346点击
+                                .date 最新更新日期：2017-06-28
+                        li
+                            a.img-link(href='#')
+                                img(src='//img.hb.aicdn.com/ec07b07a3b4d367baeca67f995cec839eccd66fba0c5-Syo1FK_sq320')
+                            .info-panel
+                                .type
+                                    span 客厅
+                                .title
+                                    a(href='#') 家装客厅设计效果图欣赏
+                                .statistical-info
+                                    span.number 共13467张
+                                    span.view 6345346点击
+                                .date 最新更新日期：2017-06-28
+                        li
+                            a.img-link(href='#')
+                                img(src='//img.hb.aicdn.com/c432dc3966a3f7c90a83af7b9001dbda58a037921d1f3-b1gnle_sq320')
+                            .info-panel
+                                .type
+                                    span 客厅
+                                .title
+                                    a(href='#') 家装客厅设计效果图欣赏
+                                .statistical-info
+                                    span.number 共13467张
+                                    span.view 6345346点击
+                                .date 最新更新日期：2017-06-28
+                        li
+                            a.img-link(href='#')
+                                img(src='//img.hb.aicdn.com/26816b22efaf65fcd633b0b46b46d380fd0f9e367b5fc-okNzUG_sq320')
+                            .info-panel
+                                .type
+                                    span 客厅
+                                .title
+                                    a(href='#') 家装客厅设计效果图欣赏
+                                .statistical-info
+                                    span.number 共13467张
+                                    span.view 6345346点击
+                                .date 最新更新日期：2017-06-28
+                        li
+                            a.img-link(href='#')
+                                img(src='//img.hb.aicdn.com/ae628925b85bbc8ecf6698ba06c69826e6b97f7a7ce65-HRnbzF_sq320')
+                            .info-panel
+                                .type
+                                    span 客厅
+                                .title
+                                    a(href='#') 家装客厅设计效果图欣赏
+                                .statistical-info
+                                    span.number 共13467张
+                                    span.view 6345346点击
+                                .date 最新更新日期：2017-06-28
+                        li
+                            a.img-link(href='#')
+                                img(src='//img.hb.aicdn.com/2df539894ede226a42fe2e20e1b9ab8665c03f9116294-7Fc9SW_sq320')
+                            .info-panel
+                                .type
+                                    span 客厅
+                                .title
+                                    a(href='#') 家装客厅设计效果图欣赏
+                                .statistical-info
+                                    span.number 共13467张
+                                    span.view 6345346点击
+                                .date 最新更新日期：2017-06-28
+                        li
+                            a.img-link(href='#')
+                                img(src='//img.hb.aicdn.com/c5c57a35b187d3b6af7730d4a635b084e3f41a051921b-GtGHEU_sq320')
+                            .info-panel
+                                .type
+                                    span 客厅
+                                .title
+                                    a(href='#') 家装客厅设计效果图欣赏
+                                .statistical-info
+                                    span.number 共13467张
+                                    span.view 6345346点击
+                                .date 最新更新日期：2017-06-28
+                        li
+                            a.img-link(href='#')
+                                img(src='//img.hb.aicdn.com/b0eab90eda43b32721cb25b224854259a5e64e9e14b83-nRlufb_sq320')
+                            .info-panel
+                                .type
+                                    span 客厅
+                                .title
+                                    a(href='#') 家装客厅设计效果图欣赏
+                                .statistical-info
+                                    span.number 共13467张
+                                    span.view 6345346点击
+                                .date 最新更新日期：2017-06-28
+                        li
+                            a.img-link(href='#')
+                                img(src='//img.hb.aicdn.com/45619154785b1e6a81450b83bfb495cb1a5fd65a7094-gvD9s8_sq320')
+                            .info-panel
+                                .type
+                                    span 客厅
+                                .title
+                                    a(href='#') 家装客厅设计效果图欣赏
+                                .statistical-info
+                                    span.number 共13467张
+                                    span.view 6345346点击
+                                .date 最新更新日期：2017-06-28
+                        li
+                            a.img-link(href='#')
+                                img(src='//img.hb.aicdn.com/b28884a9da37875de127fccfcfb1c1ac1b02d3291298d-YUs2b4_sq320')
+                            .info-panel
+                                .type
+                                    span 客厅
+                                .title
+                                    a(href='#') 家装客厅设计效果图欣赏
+                                .statistical-info
+                                    span.number 共13467张
+                                    span.view 6345346点击
+                                .date 最新更新日期：2017-06-28
+                        li
+                            a.img-link(href='#')
+                                img(src='//img.hb.aicdn.com/76f26e0e48df8b792b4ffabf94eefe49655314217787-7Z6rht_sq320')
+                            .info-panel
+                                .type
+                                    span 客厅
+                                .title
+                                    a(href='#') 家装客厅设计效果图欣赏
+                                .statistical-info
+                                    span.number 共13467张
+                                    span.view 6345346点击
+                                .date 最新更新日期：2017-06-28
+                        li
+                            a.img-link(href='#')
+                                img(src='//img.hb.aicdn.com/e1fdd81c7994f45a9abb9df38314c62a31cc23eb8a28-ZkA9Q7_sq320')
+                            .info-panel
+                                .type
+                                    span 客厅
+                                .title
+                                    a(href='#') 家装客厅设计效果图欣赏
+                                .statistical-info
+                                    span.number 共13467张
+                                    span.view 6345346点击
+                                .date 最新更新日期：2017-06-28
+                        li
+                            a.img-link(href='#')
+                                img(src='//img.hb.aicdn.com/7f12b3fa155b0bbf1f11525a828bf3b1846825a715cf2-lIE9fP_sq320')
+                            .info-panel
+                                .type
+                                    span 客厅
+                                .title
+                                    a(href='#') 家装客厅设计效果图欣赏
+                                .statistical-info
+                                    span.number 共13467张
+                                    span.view 6345346点击
+                                .date 最新更新日期：2017-06-28
+                        li
+                            a.img-link(href='#')
+                                img(src='//img.hb.aicdn.com/cb66be22f95f566d82033c0df45d4cc2a44ebf2eda52-aIpY9c_sq320')
+                            .info-panel
+                                .type
+                                    span 客厅
+                                .title
+                                    a(href='#') 家装客厅设计效果图欣赏
+                                .statistical-info
+                                    span.number 共13467张
+                                    span.view 6345346点击
+                                .date 最新更新日期：2017-06-28
+
+                    .action-box
+                        button.more(type='button') 加载更多
+        section.map
+            .content-wrapper
+                .map-container-title 以分类浏览福窝
+                .map-container-cont
+                    .map-block.component
+                        ul
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                    .map-block.style
+                        ul
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                    .map-block.type
+                        ul
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                    .map-block.use
+                        ul
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+                            li
+                                a(href='') 衣帽间
+
+
+
+
+append script
+    script(src=`${_static('script/entry/home.js')}`)

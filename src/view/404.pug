@@ -1,0 +1,21 @@
+extends /_unit/base.pug
+
+
+append data
+    -   var pageTitle = '您请求的页面不存在'
+
+
+append style
+    link(rel='stylesheet', type='text/css', href=`${_static('style/404.scss')}`)
+
+
+block pageContent
+    #page-content.page-block
+        .content-wrapper
+            p.errer-404-tips
+                a(href='/home') 返回首页
+                a(href='http://wpa.qq.com/msgrd?v=3&uin=2156274827&site=qq&menu=yes') 向我们反馈
+
+
+append script
+    script(src=`${_static('script/entry/404.js')}`)

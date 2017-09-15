@@ -1,0 +1,203 @@
+extends /_unit/base.pug
+
+
+append data
+    - var pageTitle = '装修案例列表页'
+    - var pageMountPoint = 'case'
+
+
+append style
+    link(rel='stylesheet',type='text/css',href=`${_static('style/case/list.scss')}`)
+
+
+block pageContent
+    #page-content.page-block
+        section
+            .content-wrapper
+                .screen-block
+                    nav.crumb-nav
+                        .crumb-item
+                            a.crumb-link(href='#') 装修效果图
+                        .crumb-item
+                            a.crumb-link(href='#') 家居美图
+        section.case-nav
+            .content-wrapper
+                .cont-nav
+                    ul
+                        li
+                            a.all(href='#')
+                                h2 全部
+                        li
+                            a.hot(href='#')
+                                h2 热门推荐
+                        li
+                            a.design(href='#')
+                                h2 户型设计
+                        li
+                            a.style(href='#')
+                                h2 风格欣赏
+                        li
+                            a.part(href='#')
+                                h2 局部之美
+        setction.list-content-block
+            .content-wrapper
+                ul.case-list
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .info
+                                .title 万科尚都荟135平效果图
+                                p.desc 简约风格、维持建商格局是屋主最初的想法，以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .info
+                                .title 万科尚都荟135平效果图
+                                p.desc 简约风格、维持建商格局是屋主最初的想法，以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .info
+                                .title 万科尚都荟135平效果图
+                                p.desc 简约风格、维持建商格局是屋主最初的想法，以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .info
+                                .title 万科尚都荟135平效果图
+                                p.desc 简约风格、维持建商格局是屋主最初的想法，以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .info
+                                .title 万科尚都荟135平效果图
+                                p.desc 简约风格、维持建商格局是屋主最初的想法，以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .info
+                                .title 万科尚都荟135平效果图
+                                p.desc 简约风格、维持建商格局是屋主最初的想法，以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .info
+                                .title 万科尚都荟135平效果图
+                                p.desc 简约风格、维持建商格局是屋主最初的想法，以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .info
+                                .title 万科尚都荟135平效果图
+                                p.desc 简约风格、维持建商格局是屋主最初的想法，以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .info
+                                .title 万科尚都荟135平效果图
+                                p.desc 简约风格、维持建商格局是屋主最初的想法，以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .info
+                                .title 万科尚都荟135平效果图
+                                p.desc 简约风格、维持建商格局是屋主最初的想法，以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .info
+                                .title 万科尚都荟135平效果图
+                                p.desc 简约风格、维持建商格局是屋主最初的想法，以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .info
+                                .title 万科尚都荟135平效果图
+                                p.desc 简约风格、维持建商格局是屋主最初的想法，以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .info
+                                .title 万科尚都荟135平效果图
+                                p.desc 简约风格、维持建商格局是屋主最初的想法，以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .info
+                                .title 万科尚都荟135平效果图
+                                p.desc 简约风格、维持建商格局是屋主最初的想法，以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .info
+                                .title 万科尚都荟135平效果图
+                                p.desc 简约风格、维持建商格局是屋主最初的想法，以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .info
+                                .title 万科尚都荟135平效果图
+                                p.desc 简约风格、维持建商格局是屋主最初的想法，以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .info
+                                .title 万科尚都荟135平效果图
+                                p.desc 简约风格、维持建商格局是屋主最初的想法，以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .info
+                                .title 万科尚都荟135平效果图
+                                p.desc 简约风格、维持建商格局是屋主最初的想法，以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .info
+                                .title 万科尚都荟135平效果图
+                                p.desc 简约风格、维持建商格局是屋主最初的想法，以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box
+                                img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!300x225.jpg')
+                            .info
+                                .title 万科尚都荟135平效果图
+                                p.desc 简约风格、维持建商格局是屋主最初的想法，以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.以白色为基调，加入实木皮的自然风情和铁件的俐落，让用材简单.
+                .pagination
+                    a.page-btn.prev.disabled(href='#') 上一页
+                    a.page-btn(href='#') 1
+                    span.ellipsis(href='#') ...
+                    a.page-btn(href='#') 3
+                    a.page-btn(href='#') 4
+                    a.page-btn.current(href='#') 5
+                    a.page-btn(href='#') 6
+                    a.page-btn(href='#') 7
+                    span.ellipsis(href='#') ...
+                    a.page-btn(href='#') 500
+                    a.page-btn.next(href='#') 下一页
+
+
+
+
+
+append script
+    script(src=`${_static('script/entry/case/list.js')}`)

@@ -1,0 +1,287 @@
+extends /_unit/base.pug
+
+
+append data
+    - var pageTitle = '家居图册列表页'
+    - var pageMountPoint = 'album'
+
+
+append style
+    link(rel='stylesheet',type='text/css',href=`${_static('style/album/list.scss')}`)
+
+
+block pageContent
+    #page-content.page-block
+        section
+            .content-wrapper
+                .screen-block
+                    nav.crumb-nav
+                        .crumb-item
+                            a.crumb-link(href='#') 装修效果图
+                        .crumb-item
+                            a.crumb-link(href='#') 家居美图
+                        .crumb-item
+                            a.screening-condition(href='#') 家居美图
+                            a.screening-condition(href='#') 客厅
+                            a.clean-all(href='#') 清除所有筛选
+                        a.other-link(href='#') 公装效果图
+                    ul.screen-list
+                        li
+                            .title 空间
+                            .cont
+                                ul.option-list
+                                    li.selected
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                        li
+                            .title 风格
+                            .cont
+                                ul.option-list
+                                    li.selected
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                        li
+                            .title 局部
+                            .cont
+                                ul.option-list
+                                    li.selected
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 客厅
+                        li
+                            .title 颜色
+                            .cont
+                                ul.option-list.color-list
+                                    li
+                                        a(href='#', style='background: #00f;', title='蓝色') 蓝色
+                                    li
+                                        a(href='#', style='background: #43e7e9;', title='青色') 青色
+                                    li
+                                        a(href='#', style='background: #0f0;', title='绿色') 绿色
+                                    li
+                                        a(href='#', style='background: #fff;', title='白色') 白色
+                                    li
+                                        a(href='#', style='background: #f0f0f0;', title='灰色') 灰色
+                                    li
+                                        a(href='#', style='background: #ff0;', title='黄色') 黄色
+                                    li.selected
+                                        a(href='#', style='background: #f60;', title='橙色') 橙色
+                                    li
+                                        a(href='#', style='background: #572d2d;', title='棕色') 棕色
+                                    li
+                                        a(href='#', style='background: #f00;', title='红色') 红色
+        section
+            .content-wrapper
+                .recommend-box.closed
+                    .title 相关推荐
+                    .cont
+                        ul.tag-list
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                            li
+                                a(href='#') 现代风格客厅
+                    button.ctrl-btn(type='button')
+        setction.list-content-block
+            .content-wrapper
+                ul.album-list
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box-wrapper
+                                .image-box
+                                    img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!240x240.jpg')
+                                .image-box
+                                    img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!240x240.jpg')
+                                .image-box
+                                    img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!240x240.jpg')
+                            .title 万科尚都荟135平效果图
+                            .count 12张
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box-wrapper
+                                .image-box
+                                    img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!420x280.jpg')
+                            .title 万科尚都荟135平效果图
+                            .count 2张
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box-wrapper
+                                .image-box
+                                    img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!240x240.jpg')
+                                .image-box
+                                    img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!240x240.jpg')
+                                .image-box
+                                    img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!240x240.jpg')
+                            .title 万科尚都荟135平效果图
+                            .count 12张
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box-wrapper
+                                .image-box
+                                    img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!420x280.jpg')
+                            .title 万科尚都荟135平效果图
+                            .count 2张
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box-wrapper
+                                .image-box
+                                    img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!420x280.jpg')
+                            .title 万科尚都荟135平效果图
+                            .count 2张
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box-wrapper
+                                .image-box
+                                    img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!420x280.jpg')
+                            .title 万科尚都荟135平效果图
+                            .count 2张
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box-wrapper
+                                .image-box
+                                    img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!240x240.jpg')
+                                .image-box
+                                    img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!240x240.jpg')
+                                .image-box
+                                    img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!240x240.jpg')
+                            .title 万科尚都荟135平效果图
+                            .count 12张
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box-wrapper
+                                .image-box
+                                    img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!420x280.jpg')
+                            .title 万科尚都荟135平效果图
+                            .count 2张
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box-wrapper
+                                .image-box
+                                    img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!240x240.jpg')
+                                .image-box
+                                    img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!240x240.jpg')
+                                .image-box
+                                    img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!240x240.jpg')
+                            .title 万科尚都荟135平效果图
+                            .count 12张
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box-wrapper
+                                .image-box
+                                    img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!420x280.jpg')
+                            .title 万科尚都荟135平效果图
+                            .count 2张
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box-wrapper
+                                .image-box
+                                    img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!240x240.jpg')
+                                .image-box
+                                    img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!240x240.jpg')
+                                .image-box
+                                    img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!240x240.jpg')
+                            .title 万科尚都荟135平效果图
+                            .count 12张
+                    li
+                        a(href='#', title='万科尚都荟135平效果图')
+                            .image-box-wrapper
+                                .image-box
+                                    img(src='http://img.fuwo.com/attachment/1612/29/76de9da8cdbd11e6bfe800163e000ee8.jpg@!420x280.jpg')
+                            .title 万科尚都荟135平效果图
+                            .count 2张
+                .pagination
+                    a.page-btn.prev.disabled(href='#') 上一页
+                    a.page-btn(href='#') 1
+                    span.ellipsis(href='#') ...
+                    a.page-btn(href='#') 3
+                    a.page-btn(href='#') 4
+                    a.page-btn.current(href='#') 5
+                    a.page-btn(href='#') 6
+                    a.page-btn(href='#') 7
+                    span.ellipsis(href='#') ...
+                    a.page-btn(href='#') 500
+                    a.page-btn.next(href='#') 下一页
+
+
+
+
+
+append script
+    script(src=`${_static('script/entry/album/list.js')}`)

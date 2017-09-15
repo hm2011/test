@@ -1,0 +1,195 @@
+@charset "utf-8";
+
+
+// 筛选块
+.screen-block {
+    margin-top: 20px;
+    border: 1px solid #f0f0f0;
+    background-color: #fff;
+    .crumb-nav {
+        height:50px;
+        padding: 0 20px;
+    }
+    .crumb-item {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 10px;
+        height: 50px;
+        line-height: 50px;
+        &:before {
+            content: ">";
+            margin-right: 10px;
+        }
+        &:first-child {
+            margin-left: 0;
+            &:before {
+                display: none;
+            }
+        }
+    }
+    .crumb-link {
+        color: #666;
+        text-decoration: none;
+        &:hover {
+            color: $primary-color;
+        }
+    }
+    .screening-condition {
+        display: inline-block;
+        // vertical-align: middle;
+        position: relative;
+        margin: 0 4px;
+        height: 20px;
+        padding: 0 22px 0 6px;
+        border: 1px solid $primary-color;
+        line-height: 18px;
+        font-size: 12px;
+        color: $primary-color;
+        text-decoration: none;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 3px;
+            right: 4px;
+            width: 12px;
+            height: 12px;
+            background-image: url(/style/_asset/image/screen_block/screening_condition_icon.png);
+            background-repeat: no-repeat;
+        }
+        &:hover {
+            color: #fff;
+            background-color: $primary-color;
+            &:after {
+                background-image: url(/style/_asset/image/screen_block/screening_condition_icon_h.png);
+            }
+        }
+    }
+    .clean-all {
+        margin-left: 10px;
+        font-size: 12px;
+        color: #666;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .other-link {
+        float: right;
+        padding: 0 20px;
+        line-height: 50px;
+        font-size: 14px;
+        color: #999;
+        text-decoration: none;
+        &:hover {
+            color: $primary-color;
+            text-decoration: underline;
+        }
+    }
+    .screen-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        & > li {
+            position: relative;
+            margin: 0;
+            padding: 0 0 0 68px;
+            border-top: 1px solid #f0f0f0;
+        }
+        .title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 68px;
+            height: 52px;
+            padding: 0 5px;
+            line-height: 52px;
+            color: #333;
+            text-align: center;
+            @include single-line();
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 18px;
+                right: 0;
+                width: 1px;
+                height: 16px;
+                background-color: #f0f0f0;
+            }
+        }
+        .cont {
+            padding: 0 10px;
+            background: url(/style/_asset/image/screen_block/option_list_bg.png) repeat;
+        }
+    }
+    .option-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        @include clearfix();
+        & > li {
+            float: left;
+            margin: 15px 8px;
+            padding: 0;
+        }
+        .selected {
+            a {
+                color: $primary-color;
+            }
+        }
+        a {
+            display: block;
+            padding: 0 12px;
+            height: 22px;
+            line-height: 22px;
+            color: #666;
+            text-decoration: none;
+            transition: all .3s ease-out 0s;
+            &:hover {
+                background-color: $primary-color;
+                color: #fff;
+            }
+        }
+        &.color-list {
+            padding: 0 20px;
+            & > li {
+                margin:18px 0;
+            }
+            a {
+                position: relative;
+                padding: 0;
+                width: 25px;
+                height: 16px;
+                line-height: 0;
+                font-size: 0;
+                text-indent: 25px;
+                overflow: hidden;
+                opacity: .7;
+                &:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0,0,0,.03);
+                }
+                &:hover {
+                    box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+                    opacity: 1;
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+            .selected {
+                a {
+                    //box-shadow: 0 0 0 1px $primary-color inset;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

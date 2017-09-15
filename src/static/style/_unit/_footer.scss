@@ -1,0 +1,358 @@
+@charset "utf-8";
+
+
+#page-footer {
+    margin-top: -405px;
+    padding-top: 20px;
+    height: 405px;
+    color: #999;
+    background-color: #333;
+
+    .site-map-list {
+        position: relative;
+        margin: 0;
+        padding: 10px 0;
+        height: 180px;
+        overflow: hidden;
+        nav {
+            padding: 10px 0;
+            @include clearfix();
+        }
+        .map-title {
+            float: left;
+            margin-right: 10px;
+            width: 90px;
+            height: 34px;
+            text-align: center;
+            line-height: 34px;
+            background-color: #121212;
+            cursor: pointer;
+            transition: all .3s ease-out 0s;
+            &:hover {
+                color: #fff;
+                background-color: #232323;
+            }
+            &.current {
+                color: #fff;
+                background-color: $primary-color;
+            }
+        }
+        .map-list {
+            display: none;
+            margin: 8px -20px 8px 0;
+            padding: 0;
+            list-style: none;
+            height: 90px;
+            overflow: hidden;
+            &.current {
+                display: block;
+            }
+            & > li {
+                float: left;
+                margin: 5px 20px 5px 0;
+                padding: 0;
+                height: 20px;
+                line-height: 20px;
+            }
+            a {
+                color: #999;
+                text-decoration: none;
+                &:hover {
+                    color: $primary-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .site-info {
+        .content-wrapper {
+            position: relative;
+            padding: 10px 320px 10px 0;
+            border-top: 1px solid #414141;
+        }
+    }
+    .site-link-list {
+        margin: 0;
+        padding: 5px 0;
+        list-style: none;
+        @include clearfix();
+        & > li {
+            float: left;
+            margin: 5px 28px 5px 0;
+            padding: 0;
+            height: 30px;
+            line-height: 30px;
+        }
+        a {
+            color: #fafafa;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .app-list {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        margin: 0;
+        padding: 5px;
+        list-style: none;
+        & > li {
+            float: left;
+            margin: 0 5px;
+            padding: 5px;
+            width: 110px;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 90px;
+            height: 90px;
+        }
+        .title {
+            display: block;
+            line-height: 34px;
+            text-align: center;
+            @include single-line();
+        }
+    }
+    .statement {
+        margin: 0;
+        padding: 8px 0;
+        line-height: 28px;
+    }
+    .disclaimer {
+        margin-right: 20px;
+    }
+    .copyright {
+        display: inline-block;
+    }
+    .record-info {
+        display: block;
+        a {
+            color: #999;
+            text-decoration: none;
+            &:hover {
+                color: $primary-color;
+                text-decoration: underline;
+            }
+            img {
+                border-width: 0;
+                height: 24px;
+                width: auto;
+            }
+        }
+    }
+}
+
+
+
+
+
+// 网站信息
+.site-info-block {
+    width: 100%;
+    min-width: 1220px;
+    background-color: #2d3236;
+    .site-info-content {
+        margin: 0 auto;
+        width: 1220px;
+        @include clearfix();
+    }
+    .info-block {
+        float: left;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        &.base {
+            width: 430px;
+            line-height: 30px;
+        }
+        &.tag {
+            margin-left: 50px;
+            width: 430px;
+            line-height: 30px;
+        }
+        &.app-download {
+            margin-left: 50px;
+            width: 190px;
+            text-align: center;
+            line-height: 26px;
+        }
+    }
+    .slogan, h4 {
+        display: block;
+        margin: 0 0 20px;
+        line-height: 30px;
+        font-size: 16px;
+        color: #fff;
+        font-style: normal;
+        font-weight: normal;
+    }
+    .site-link-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        &>li {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0 8px;
+            height: 16px;
+            line-height: 16px;
+            border-left: 1px solid #999;
+            &:first-child {
+                border-left-width: 0;
+                padding-left: 0;
+            }
+        }
+    }
+    .site-link, .email, .tag-link, .more {
+        color: #999;
+        text-decoration: none;
+        &:hover {
+            color: $primary-color;
+        }
+    }
+    .tag-link-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        &>li {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 6px;
+            width: 100px;
+            @include single-line();
+        }
+    }
+    .qr-code {
+        display: block;
+        margin: 8px auto;
+        max-height: 96px;
+    }
+}
+
+
+// 友情链接
+.f-link-block {
+    width: 100%;
+    min-width: 1220px;
+    background-color: #23282c;
+    .f-link-content {
+        margin: 0 auto;
+        width: 1220px;
+        @include clearfix();
+    }
+}
+.f-link-wrapper {
+    position: relative;
+    padding: 15px 20px 15px 70px;
+    font-size: 14px;
+    line-height: 26px;
+    .label {
+        position: absolute;
+        top: 16px;
+        left: 0;
+        width: 70px;
+        height: 26px;
+        overflow: hidden;
+    }
+    .f-link-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        height: 26px;
+        overflow: hidden;
+    }
+    .f-link-item {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: -1px;
+        padding: 0 8px;
+        height: 16px;
+        line-height: 16px;
+        border-left: 1px solid #999;
+        border-right: 1px solid #999;
+        a {
+            color: #999;
+            text-decoration: none;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+    .swith {
+        display: block;
+        position: absolute;
+        top: 19px;
+        right: 0px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 8px;
+            left: 6px;
+            width: 0px;
+            height: 0px;
+            border: 4px solid transparent;
+            border-top-color: #999;
+        }
+        &:after {
+            content: "";
+            display: none;
+            position: absolute;
+            top: 4px;
+            left: 6px;
+            width: 0px;
+            height: 0px;
+            border: 4px solid transparent;
+            border-bottom-color: #999;
+        }
+    }
+    &.opened {
+        .f-link-list {
+            height: auto;
+        }
+        .swith {
+            &:before {
+                display: none;
+            }
+            &:after {
+                display: block;
+            }
+        }
+    }
+}
+
+
+// 版权信息
+.copyright-block {
+    width: 100%;
+    min-width: 1220px;
+    background-color: #23282c;
+    .copyright-content {
+        margin: 0 auto;
+        width: 1220px;
+        @include clearfix();
+    }
+    .copyright {
+        margin: 0;
+        height: 40px;
+        line-height: 40px;
+        padding-bottom: 15px;
+        a {
+            color: #999;
+            text-decoration: none;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+        img {
+            vertical-align: baseline;
+        }
+    }
+}

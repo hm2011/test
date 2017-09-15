@@ -1,0 +1,33 @@
+section.pic-player
+    .view-box
+        .image-wrapper
+            img(src=`${_static('data/image/banner01.png')}`, alt='')
+    .ctrl-box
+        .tool-bar
+            ul.tool-list
+                li
+                    button.icon-btn.indicator-ctrl.hide(type='button') 图片列表
+                li
+                    button.icon-btn.send-sms(type='button') 发送到手机
+                li
+                    button.icon-btn.wechat(type='button') 收藏到微信
+                li
+                    button.icon-btn.vr-view(type='button') VR全景效果图
+                li
+                    button.icon-btn.share(type='button') 分享
+        .album-indicator
+            ul.indicator-list
+                li
+                    img(src=`${_static('data/image/banner01.png')}`)
+                li
+                    img(src=`${_static('data/image/banner01.png')}`)
+                li.current
+                    img(src=`${_static('data/image/banner01.png')}`)
+                li
+                    img(src=`${_static('data/image/banner01.png')}`)
+                li
+                    img(src=`${_static('data/image/banner01.png')}`)
+            buttom.ctrl-btn.prev(type='buttton')
+            buttom.ctrl-btn.next(type='buttton')
+
+

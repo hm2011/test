@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+
+//配置
+@import "variable.scss";
+@import "mixin.scss";
+
+
+// reset frame
+body {
+    background-color: #f8f8f8;
+}
+
+
+// 筛选块
+@import "screen_block.scss";
+
+
+
+// 分类导航
+.tag-nav {
+    position: relative;
+    margin: 20px 0 0;
+    padding: 12px 20px 12px 140px;
+    border: 1px solid #eee;
+    .label {
+        position: absolute;
+        top: 12px;
+        left: 0;
+        width: 140px;
+        height: 40px;
+        padding: 0 10px;
+        line-height: 40px;
+        text-align: center;
+        color: #333;
+        font-size: 14px;
+        @include single-line();
+        &:after {
+            content: "：";
+        }
+    }
+    ul {
+        margin: 0 -8px;
+        padding: 0;
+        list-style: none;
+        @include clearfix();
+    }
+    li {
+        float: left;
+        margin: 8px;
+        padding: 0;
+    }
+    a {
+        display: block;
+        min-width: 30px;
+        height: 30px;
+        padding: 0 9px;
+        color: #666;
+        border: 1px solid #d2d2d2;
+        background-color: #fff;
+        line-height: 28px;
+        text-align: center;
+        font-size: 14px;
+        text-decoration: none;
+        transition: all .3s ease-out 0s;
+        &:hover {
+            color: #fff;
+            border-color: $primary-color;
+            background-color: $primary-color;
+        }
+    }
+}
+
+
+
+// 列表块
+.list-content-block {
+    .content-wrapper {
+        overflow-x: hidden;
+        padding-bottom: 20px;
+    }
+}
+
+// 标签列表
+.tag-list {
+    margin: 20px -10px;
+    padding: 0;
+    list-style: none;
+    @include clearfix();
+    & > li {
+        float: left;
+        margin: 10px;
+        padding: 0;
+    }
+    a {
+        display: block;
+        min-width: 60px;
+        max-width: 200px;
+        height: 32px;
+        padding: 0 14px;
+        background-color: #fff;
+        border: 1px solid #d2d2d2;
+        text-align: center;
+        line-height: 30px;
+        font-size: 12px;
+        color: #999;
+        text-decoration: none;
+        transition: all .1s ease-out 0s;
+        @include single-line();
+        &:hover {
+            border-color: $primary-color;
+            background-color: $primary-color;
+            color: #fff;
+            box-shadow: 0 0 8px -5px #000;
+            transition: all .3s ease-out 0s;
+        }
+    }
+}
+
+
+// 页码
+@import "pagination.scss";

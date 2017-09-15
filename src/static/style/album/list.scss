@@ -1,0 +1,298 @@
+@charset "utf-8";
+
+
+//配置
+@import "variable.scss";
+@import "mixin.scss";
+
+
+// reset frame
+body {
+    background-color: #f8f8f8;
+}
+
+
+// 筛选块
+@import "screen_block.scss";
+
+
+// 推荐块
+.recommend-box {
+    position: relative;
+    margin-top: 20px;
+    padding: 20px 70px 20px 118px;
+    border: 1px solid #f0f0f0;
+    background-color: #fff;
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-width: 20px;
+        border-style: solid;
+        border-color: #0cb469 transparent transparent #0cb469;
+        color: #fff;
+    }
+    &:after {
+        content: "荐";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 26px;
+        height: 26px;
+        line-height: 26px;
+        text-align: center;
+        color: #fff;
+    }
+    .title {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 98px;
+        height: 32px;
+        padding: 0 10px;
+        line-height: 32px;
+        text-align: center;
+        color: #999;
+        @include single-line();
+    }
+    .cont {
+        position: relative;
+        padding: 0 5px;
+        overflow: hidden;
+        transition: height .3s ease-out 0s;
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            bottom: 10px;
+            width: 1px;
+            background-color: #f0f0f0;
+        }
+    }
+    .ctrl-btn {
+        position: absolute;
+        top: 26px;
+        right: 30px;
+        width: 20px;
+        height: 20px;
+        padding: 4px;
+        background-color: #f0f0f0;
+        transition: background-color .3s ease-out 0s;
+        border-width: 0;
+        cursor: pointer;
+        outline: none;
+        &:before {
+            content: "";
+            display: block;
+            width: 12px;
+            height: 12px;
+            background-image: url(/style/_asset/image/recommend_box/switch_up.png);
+            background-repeat: no-repeat;
+        }
+        &:hover {
+            background-color: #e4e4e4;
+        }
+    }
+    &.closed {
+        .cont {
+            height: 32px;
+        }
+        .ctrl-btn {
+            &:before {
+                background-image: url(/style/_asset/image/recommend_box/switch_down.png);
+            }
+        }
+    }
+    .tag-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        @include clearfix();
+        & > li {
+            float: left;
+            height: 32px;
+            padding: 0 15px;
+            line-height: 32px;
+        }
+        a {
+            color: #999;
+            text-decoration: none;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+
+// 列表块
+.list-content-block {
+    .content-wrapper {
+        overflow-x: hidden;
+        padding-bottom: 20px;
+    }
+}
+
+// 家居图册列表
+.album-list {
+    margin: 20px -8px;
+    padding: 0;
+    list-style: none;
+    @include clearfix();
+    & > li {
+        float: left;
+        margin: 0 8px 16px;
+        padding: 0;
+        width: 362px;
+    }
+    a {
+        position: relative;
+        display: block;
+        background-color: #fff;
+        border: 1px solid #f0f0f0;
+        box-shadow: 0 0 8px -5px #000;
+        color: #333;
+        text-decoration: none;
+        transition: all .1s ease-out 0s;
+        &:hover {
+            border-color: #e0e0e0;
+            box-shadow: 0 5px 8px -5px #000;
+            color: $primary-color;
+            transform: translate(0, -5px);
+            transition: all .3s ease-out 0s;
+        }
+    }
+    .image-box-wrapper {
+        position: relative;
+        width: 360px;
+        height: 240px;
+    }
+    .image-box {
+        overflow: hidden;
+        &:first-child {
+            width: 240px;
+            height: 240px;
+        }
+        &:nth-child(2) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 120px;
+            height: 120px;
+        }
+        &:nth-child(3) {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 120px;
+            height: 120px;
+        }
+        &:only-child {
+            width: 360px;
+            height: 240px;
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            transition: all .1s ease-out 0s;
+        }
+        &:hover {
+            img {
+                opacity: .8;
+                transform: scale(1.1);
+                transition: all .3s ease-out 0s;
+            }
+        }
+    }
+    .title {
+        padding: 0 10px;
+        height: 48px;
+        line-height: 48px;
+        @include single-line();
+    }
+    .count {
+        position: absolute;
+        right: 10px;
+        bottom: 58px;
+        height: 24px;
+        padding: 0 15px;
+        border-radius: 12px;
+        background-color: rgba(0,0,0,.5);
+        line-height: 24px;
+        color: #fff;
+    }
+}
+@media screen and (max-width:1550px) {
+    .album-list {
+        margin: 20px -7px;
+        & > li {
+            margin: 0 7px 14px;
+            width: 314px;
+        }
+        .image-box-wrapper {
+            width: 312px;
+            height: 208px;
+        }
+        .image-box {
+            &:first-child {
+                width: 208px;
+                height: 208px;
+            }
+            &:nth-child(2) {
+                width: 104px;
+                height: 104px;
+            }
+            &:nth-child(3) {
+                width: 104px;
+                height: 104px;
+            }
+            &:only-child {
+                width: 312px;
+                height: 208px;
+            }
+        }
+    }
+}
+@media screen and (max-width:1320px) {
+    .album-list {
+        margin: 20px -6px;
+        & > li {
+            margin: 0 8px 16px;
+            width: 236px;
+        }
+        .image-box-wrapper {
+            width: 234px;
+            height: 156px;
+        }
+        .image-box {
+            &:first-child {
+                width: 156px;
+                height: 156px;
+            }
+            &:nth-child(2) {
+                width: 78px;
+                height: 78px;
+            }
+            &:nth-child(3) {
+                width: 78px;
+                height: 78px;
+            }
+            &:only-child {
+                width: 234px;
+                height: 156px;
+            }
+        }
+    }
+}
+
+
+// 页码
+@import "pagination.scss";

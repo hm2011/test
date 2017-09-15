@@ -1,0 +1,7 @@
+{
+	"name": "meitu",
+	"port": 80,
+	"staticBaseUrl": "//static.fuwo.com/meitu/",
+	"apiBaseUrl": "http://192.168.3.93:80/",
+	"host":"meitu.fuwo.com"
+}

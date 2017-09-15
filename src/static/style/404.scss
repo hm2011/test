@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+
+// 基础配置
+@import "variable.scss";
+@import "mixin.scss";
+
+
+// reset
+body {
+    background-color: #4a4a4a;
+}
+
+
+
+.errer-404-tips {
+    margin: 20px auto 0;
+    padding: 380px 240px 0;
+    width: 900px;
+    height: 450px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 18px;
+    background: url(/style/_asset/image/error_404.png) no-repeat center top;
+    a {
+        margin: 0 30px;
+        color: #fff;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

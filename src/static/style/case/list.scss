@@ -1,0 +1,227 @@
+@charset "utf-8";
+
+
+//配置
+@import "variable.scss";
+@import "mixin.scss";
+
+
+// reset frame
+body {
+    background-color: #f8f8f8;
+}
+
+
+// 筛选块
+@import "screen_block.scss";
+
+
+
+.case-nav {
+    .content-wrapper {
+        overflow: hidden;
+    }
+}
+
+// 内容导航块
+.cont-nav {
+    margin: 20px -8px 0;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        @include clearfix();
+    }
+    li {
+        float: left;
+        margin: 0;
+        padding: 0 8px;
+        width: 20%;
+        text-align: center;
+    }
+    a {
+        display: block;
+        position: relative;
+        padding: 20px;
+        height: 120px;
+        color: #fff;
+        text-decoration: none;
+        background-repeat: no-repeat;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.3);
+            transition: background-color .3s ease-out 0s;
+        }
+        &.all {
+            background-image: url(/style/_asset/image/case/anli_1.png);
+        }
+        &.hot {
+            background-image: url(/style/_asset/image/case/anli_2.png);
+        }
+        &.design {
+            background-image: url(/style/_asset/image/case/anli_3.png);
+        }
+        &.style {
+            background-image: url(/style/_asset/image/case/anli_4.png);
+        }
+        &.part {
+            background-image: url(/style/_asset/image/case/anli_5.png);
+        }
+        &:hover {
+            &:after {
+                background-color: rgba(0,0,0,.6);
+            }
+        }
+    }
+    h2 {
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        height: 100%;
+        font-size: 26px;
+        font-weight: normal;
+        line-height: 80px;
+    }
+}
+@media screen and (max-width:1550px) {
+    .cont-nav {
+        a {
+            padding: 15px;
+            height: 100px;
+        }
+        h2 {
+            font-size: 24px;
+            line-height: 70px;
+        }
+    }
+}
+@media screen and (max-width:1366px) {
+    .cont-nav {
+        a {
+            padding: 10px;
+            height: 80px;
+        }
+        h2 {
+            font-size: 20px;
+            line-height: 60px;
+        }
+    }
+}
+
+
+// 列表块
+.list-content-block {
+    .content-wrapper {
+        overflow-x: hidden;
+        padding-bottom: 20px;
+    }
+}
+
+// 案例列表
+.case-list {
+    margin: 20px -8px;
+    padding: 0;
+    list-style: none;
+    @include clearfix();
+    & > li {
+        float: left;
+        margin: 0 8px 16px;
+        padding: 0;
+        width: 362px;
+    }
+    a {
+        display: block;
+        background-color: #fff;
+        border: 1px solid #f0f0f0;
+        box-shadow: 0 0 8px -5px #000;
+        color: #333;
+        text-decoration: none;
+        transition: all .1s ease-out 0s;
+        &:hover {
+            border-color: #e0e0e0;
+            box-shadow: 0 5px 8px -5px #000;
+            color: $primary-color;
+            transform: translate(0, -5px);
+            transition: all .3s ease-out 0s;
+        }
+    }
+    .image-box {
+        width: 360px;
+        height: 240px;
+        overflow: hidden;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            transition: all .1s ease-out 0s;
+        }
+        &:hover {
+            img {
+                opacity: .8;
+                transform: scale(1.1);
+                transition: all .3s ease-out 0s;
+            }
+        }
+    }
+    .info {
+        padding: 10px 10px 15px 10px;
+    }
+    .title {
+        height: 36px;
+        line-height: 36px;
+        font-size: 18px;
+        @include single-line();
+    }
+    .desc {
+        margin: 0;
+        height: 36px;
+        line-height: 18px;
+        font-size: 12px;
+        color: #999;
+        @include multiple-line();
+    }
+}
+@media screen and (max-width:1550px) {
+    .case-list {
+        margin: 20px -7px;
+        & > li {
+            margin: 0 7px 14px;
+            width: 314px;
+        }
+        .image-box {
+            width: 312px;
+            height: 208px;
+        }
+    }
+}
+@media screen and (max-width:1320px) {
+    .case-list {
+        margin: 20px -6px;
+        & > li {
+            margin: 0 8px 16px;
+            width: 236px;
+        }
+        .image-box {
+            width: 234px;
+            height: 158px;
+        }
+        .info {
+            padding: 5px 10px 10px 10px;
+        }
+        .title {
+            font-size: 14px;
+            height: 32px;
+            line-height: 32px;
+        }
+    }
+}
+
+
+// 页码
+@import "pagination.scss";

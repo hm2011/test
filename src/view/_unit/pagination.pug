@@ -1,0 +1,12 @@
+.pagination
+     a.page-btn.prev.disabled(href='#') 上一页
+     a.page-btn(href=`${_url.update(url, {page: 1})}`) 1
+     span.ellipsis ...
+     a.page-btn(href='#') 3
+     a.page-btn(href='#') 4
+     a.page-btn.current(href=`${_url.update(url, {page: currentPage})}`) #{data.pagination.currentPage}
+     a.page-btn(href='#') 6
+     a.page-btn(href='#') 7
+     span.ellipsis ...
+     a.page-btn(href=`${_url.update(url, {page: nextPage})}`) #{data.pagination.maxPage}
+     a.page-btn.next(href=`${_url.update(url, {page: nextPage})}`) 下一页

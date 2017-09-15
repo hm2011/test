@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+
+// 基础配置
+@import "variable.scss";
+@import "mixin.scss";
+
+
+ 
+//字体
+$font-family: "Helvetica Neue", Helvetica, sans-serif !default;
+
+//字号
+$font-size: 14px !default;
+
+//行高
+$line-height: 1.5em;
+
+//文本色
+$text-color: #333333;
+$text-lighter-color: #666666;
+$text-lightest-color: #999999;
+
+
+* {
+    box-sizing: border-box;
+    // -webkit-tap-highlight-color: rgba(0,0,0,0);
+    // -webkit-tap-highlight-color: transparent;
+    // outline: none;
+}
+
+::-ms-clear,
+::-ms-reveal {
+    display: none;
+}
+
+a img {
+    border-width: 0;
+}
+
+html {
+    height: 100%;
+    min-height: 600px;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    font-family: $font-family;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $text-color;
+    background-color: $body-background-color;
+}
+
+.page-block {
+    min-width: 1496px;
+}
+@media screen and (max-width:1550px) {
+    .page-block {
+        min-width: 1298px;
+    }
+}
+@media screen and (max-width:1320px) {
+    .page-block {
+        min-width: 996px;
+    }
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    width: 1496px;
+    @include clearfix();
+}
+@media screen and (max-width:1550px) {
+    .content-wrapper {
+        width: 1298px;
+    }
+}
+@media screen and (max-width:1320px) {
+    .content-wrapper {
+        width: 996px;
+    }
+}
+
+
+
+
+// 页头
+@import "header.scss";
+
+// 主体内容
+#page-content {
+    padding: 56px 0 405px; 
+    min-height: 100%;
+}
+
+// 页脚
+@import "footer.scss";

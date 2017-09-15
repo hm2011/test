@@ -1,0 +1,26 @@
+{
+	"port": 8050,
+	"hostname": "frame.fuwo.com",
+	"apiHost": "127.0.0.1:80",
+	"staticBaseUrl": "/static/",
+	"apiProxy": "http://127.0.0.1:8001",
+	"app": {
+		"hostname": "www.",
+		"port": 8050,
+		"name": "",
+		"staticBaseUrl": "/static/",
+		"proxy": {
+			"hostname": "www.test.com",
+			"ip": "127.0.0.1",
+			"port": 3000
+		}
+	},
+	"api": {
+		"ip": "127.0.0.1",
+		"port": 80,
+		"proxy": {
+			"ip": "127.0.0.1",
+			"port": 8001
+		}
+	}
+}

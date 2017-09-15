@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+
+.pagination {
+	margin: 20px 0;
+	text-align: center;
+	.page-btn {
+		display: inline-block;
+		vertical-align: middle;
+		min-width: 34px;
+		height: 32px;
+		padding: 0 10px;
+		background-color: #fff;
+		border: 1px solid #ddd;
+		line-height: 30px;
+		text-align: center;
+		font-size: 14px;
+		color: #666;
+		text-decoration: none;
+		transition: color .3s ease-out 0s, background-color .3s ease-out 0s, border-color .3s ease-out 0s;
+		& + .page-btn {
+			margin-left: -1px;
+		}
+		&:hover {
+			position: relative;
+			z-index: 1;
+			color: #333;
+			background-color: #f8f8f8;
+			border-color: #c0c0c0;
+			box-shadow: 0 0 5px -2px #000;
+		}
+		&.prev {
+			&:before {
+				content: "\ab";
+				vertical-align: 1px;
+				margin-right: 2px;
+			}
+		}
+		&.next {
+			&:after {
+				content: "\bb";
+				vertical-align: 1px;
+				margin-left: 2px;
+			}
+		}
+		&.current {
+			position: relative;
+			z-index: 2;
+			background-color: $primary-color;
+			border-color: $primary-color;
+			color: #fff;
+			box-shadow: none;
+		}
+		&.disabled {
+			cursor: not-allowed;
+			background-color: #f0f0f0;
+			border-color: #ddd;
+			color: #999;
+			text-shadow: 1px 1px #fff;
+			box-shadow: none;
+		}
+	}
+	.ellipsis {
+		display: inline-block;
+		width: 34px;
+		height: 32px;
+		line-height: 32px;
+		text-align: center;
+	}
+}

@@ -1,0 +1,143 @@
+header#page-header(class=`page-block${ headerType === 'transparent' ? ' transparent' : ''}`)
+    .content-wrapper
+        a.logo(href='#')
+        nav.site-nav
+            ul.nav-list
+                li.nav-item
+                    a(class=`nav-link ${pageMountPoint === 'home' ? ' current' : ''}`, href='/home') 首页
+                li.nav-item.has-menu
+                    a(class=`nav-link ${pageMountPoint === 'photo' ? ' current' : ''}`, href='/photo') 家居美图
+                    .detail-panel
+                        .content-wrapper
+                            .group
+                                .group-title 按空间
+                                ul.group-menu
+                                    li
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 卧室
+                                    li
+                                        a(href='#') 餐厅
+                                    li
+                                        a(href='#') 厨房
+                                    li
+                                        a(href='#') 卫生间
+                                    li
+                                        a(href='#') 阳台
+                            .group
+                                .group-title 按风格
+                                ul.group-menu
+                                    li
+                                        a(href='#') 简约
+                                    li
+                                        a(href='#') 现代
+                                    li
+                                        a(href='#') 中式
+                                    li
+                                        a(href='#') 欧式
+                                    li
+                                        a(href='#') 美式
+                                    li
+                                        a(href='#') 田园
+                            .group
+                                .group-title 按户型
+                                ul.group-menu
+                                    li
+                                        a(href='#') 小户型
+                                    li
+                                        a(href='#') 一居
+                                    li
+                                        a(href='#') 二居
+                                    li
+                                        a(href='#') 三居
+                                    li
+                                        a(href='#') 复式
+                                    li
+                                        a(href='#') 别墅
+                            .group
+                                .group-title 按布局
+                                ul.group-menu
+                                    li
+                                        a(href='#') 背景墙
+                                    li
+                                        a(href='#') 吊顶
+                                    li
+                                        a(href='#') 隔断
+                                    li
+                                        a(href='#') 窗帘
+                                    li
+                                        a(href='#') 飘窗
+                                    li
+                                        a(href='#') 榻榻米
+                li.nav-item.has-menu
+                    a(class=`nav-link ${pageMountPoint === 'album' ? ' current' : ''}`, href='/album') 家居图册
+                    .detail-panel
+                        .content-wrapper
+                            .group
+                                .group-title 按空间
+                                ul.group-menu
+                                    li
+                                        a(href='#') 客厅
+                                    li
+                                        a(href='#') 卧室
+                                    li
+                                        a(href='#') 餐厅
+                                    li
+                                        a(href='#') 厨房
+                                    li
+                                        a(href='#') 卫生间
+                                    li
+                                        a(href='#') 阳台
+                            .group
+                                .group-title 按风格
+                                ul.group-menu
+                                    li
+                                        a(href='#') 简约
+                                    li
+                                        a(href='#') 现代
+                                    li
+                                        a(href='#') 中式
+                                    li
+                                        a(href='#') 欧式
+                                    li
+                                        a(href='#') 美式
+                                    li
+                                        a(href='#') 田园
+                            .group
+                                .group-title 按户型
+                                ul.group-menu
+                                    li
+                                        a(href='#') 小户型
+                                    li
+                                        a(href='#') 一居
+                                    li
+                                        a(href='#') 二居
+                                    li
+                                        a(href='#') 三居
+                                    li
+                                        a(href='#') 复式
+                                    li
+                                        a(href='#') 别墅
+                            .group
+                                .group-title 按布局
+                                ul.group-menu
+                                    li
+                                        a(href='#') 背景墙
+                                    li
+                                        a(href='#') 吊顶
+                                    li
+                                        a(href='#') 隔断
+                                    li
+                                        a(href='#') 窗帘
+                                    li
+                                        a(href='#') 飘窗
+                                    li
+                                        a(href='#') 榻榻米
+                li.nav-item
+                    a(class=`nav-link ${pageMountPoint === 'case' ? ' current' : ''}`, href='/case') 装修案例
+                li.nav-item
+                    a(class=`nav-link ${pageMountPoint === 'public' ? ' current' : ''}`, href='/public') 公装图册
+        form.search-box(action='/search')
+            input(type='text', name='keywords', maxlength='30', placeholder='搜索你喜欢的')
+            button(type='submit')
+            span.underline

@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+
+// 基础配置
+@import "variable.scss";
+@import "mixin.scss";
+
+
+
+.error {
+    min-height: 400px;
+    padding: 20px 0;
+    line-height: 26px;
+    font-size: 14px;
+    color: #f00;
+}
